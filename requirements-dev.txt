@@ -1,0 +1,4 @@
+# Desenvolvimento / AC3 QA (pytest + E2E opcional)
+pytest>=7.4
+selenium>=4.15
+webdriver-manager>=4.0
