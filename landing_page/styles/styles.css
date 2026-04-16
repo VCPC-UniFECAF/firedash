@@ -238,3 +238,380 @@ input{
     border: none;
     font-size: 15px;
 }
+
+/* ---------- Landing (index, serviços, sobre, contato, login) ---------- */
+body.site-landing {
+    text-align: inherit;
+}
+
+body.site-landing img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+body.site-landing .text-fd-accent {
+    color: rgb(57, 245, 184);
+}
+
+body.site-landing p {
+    display: block;
+    max-width: none;
+}
+
+body.site-landing .hero-lead {
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+}
+
+body.site-landing .hero-title {
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+body.site-landing .navbar-fd {
+    background: rgba(20, 10, 35, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(57, 245, 184, 0.18);
+}
+
+/* Header: grupo marca + menu centralizado (evita vão entre extremidades) */
+body.site-landing .navbar-fd > .fd-navbar-container {
+    position: relative;
+    justify-content: center !important;
+    align-items: center;
+    gap: 0.75rem 2.5rem;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+    body.site-landing .navbar-fd > .fd-navbar-container {
+        flex-wrap: nowrap;
+        gap: 2rem 3rem;
+    }
+
+    body.site-landing .navbar-expand-lg.navbar-fd {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 991.98px) {
+    body.site-landing .navbar-fd .fd-navbar-brand {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+
+    body.site-landing .navbar-fd .fd-navbar-toggler {
+        position: absolute;
+        top: 0.6rem;
+        right: var(--bs-gutter-x, 0.75rem);
+        z-index: 2;
+    }
+
+    body.site-landing .navbar-fd .fd-navbar-collapse {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    body.site-landing .navbar-fd .fd-navbar-nav {
+        padding-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body.site-landing .navbar-fd .fd-navbar-brand {
+        flex-shrink: 0;
+    }
+
+    body.site-landing .navbar-fd .fd-navbar-collapse {
+        flex-grow: 0 !important;
+        width: auto;
+    }
+}
+
+body.site-landing .brand-logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+@media (min-width: 768px) {
+    body.site-landing .brand-logo-img {
+        height: 46px;
+    }
+}
+
+body.site-landing .navbar-brand .brand-tagline {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 0.1rem;
+}
+
+body.site-landing .nav-link {
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-weight: 500;
+}
+
+body.site-landing .nav-link:hover,
+body.site-landing .nav-link:focus {
+    color: rgb(57, 245, 184) !important;
+}
+
+body.site-landing .btn-fd-primary {
+    background: linear-gradient(135deg, rgb(57, 245, 184), rgb(42, 190, 145));
+    border: none;
+    color: #0a1628;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(57, 245, 184, 0.25);
+}
+
+body.site-landing .btn-fd-primary:hover {
+    background: linear-gradient(135deg, rgb(72, 255, 198), rgb(57, 245, 184));
+    color: #061018;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 28px rgba(57, 245, 184, 0.35);
+}
+
+body.site-landing .btn-fd-outline {
+    border: 2px solid rgb(57, 245, 184);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 12px;
+    background: transparent;
+}
+
+body.site-landing .btn-fd-outline:hover {
+    background: rgb(57, 245, 184);
+    color: #0a1628;
+    border-color: rgb(57, 245, 184);
+}
+
+body.site-landing .bg-graphic-wrap #grafic,
+body.site-landing .hero-bg-chart {
+    width: auto;
+    max-width: min(100%, 100%);
+    max-height: 220px;
+    opacity: 0.09;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    body.site-landing .hero-bg-chart,
+    body.site-landing .bg-graphic-wrap #grafic {
+        max-height: 340px;
+        max-width: min(100%, 1100px);
+    }
+}
+
+@media (min-width: 1200px) {
+    body.site-landing .hero-bg-chart,
+    body.site-landing .bg-graphic-wrap #grafic {
+        max-height: 440px;
+        max-width: min(100%, 1280px);
+    }
+}
+
+body.site-landing .carousel-fd {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(57, 245, 184, 0.12);
+}
+
+body.site-landing .carousel-fd-inner {
+    min-height: 280px;
+}
+
+@media (min-width: 768px) {
+    body.site-landing .carousel-fd-inner {
+        min-height: 360px;
+    }
+}
+
+body.site-landing .testimonial-slide {
+    min-height: 280px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: rgba(10, 20, 35, 0.5);
+}
+
+@media (min-width: 768px) {
+    body.site-landing .testimonial-slide {
+        min-height: 360px;
+    }
+}
+
+body.site-landing .carousel-fd .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(57, 245, 184);
+    opacity: 0.4;
+}
+
+body.site-landing .carousel-fd .carousel-indicators .active {
+    opacity: 1;
+}
+
+body.site-landing .carousel-fd-control {
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: rgba(20, 10, 35, 0.75);
+    opacity: 1;
+}
+
+body.site-landing .carousel-fd-control:hover {
+    background: rgba(57, 245, 184, 0.35);
+}
+
+body.site-landing .site-footer {
+    background: rgba(0, 0, 0, 0.22);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Contato — cartões (altura fluida, texto contido) */
+body.site-landing .fd-contato-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.site-landing .fd-contato-card {
+    flex: 1 1 240px;
+    max-width: 320px;
+    min-width: min(100%, 220px);
+    box-sizing: border-box;
+    padding: 1.35rem 1.25rem 1.5rem;
+    background-image: linear-gradient(180deg, rgb(26, 68, 54), rgb(34, 34, 34));
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(57, 245, 184, 0.12);
+}
+
+body.site-landing .fd-contato-card .contato-card-title {
+    color: rgb(57, 245, 184);
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: normal;
+    margin: 0 0 0.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
+    font-family: inherit;
+}
+
+body.site-landing .fd-contato-card .contato-card-icon {
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+body.site-landing .fd-contato-card .contato-card-text {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0 0 0.65rem 0;
+    width: 100%;
+}
+
+body.site-landing .fd-contato-card .contato-card-text:last-of-type {
+    margin-bottom: 0;
+}
+
+body.site-landing .fd-contato-card .fd-contato-link {
+    margin-top: auto;
+    padding-top: 0.85rem;
+    color: rgb(57, 245, 184);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+body.site-landing .fd-contato-card .fd-contato-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+body.site-landing .footer-social-icon {
+    width: 25.3px;
+    height: 25.3px;
+    display: block;
+    object-fit: contain;
+}
+
+body.site-landing .footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+body.site-landing .footer-social-link:hover {
+    background: rgba(57, 245, 184, 0.2);
+    transform: translateY(-2px);
+}
+
+body.site-landing .bg-modal-dark {
+    background: linear-gradient(165deg, #1a1430 0%, #122332 100%);
+    border: 1px solid rgba(57, 245, 184, 0.22);
+    border-radius: 16px;
+}
+
+body.site-landing .modal-content .form-control,
+body.site-landing .modal-content .form-select {
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    border-radius: 10px;
+}
+
+body.site-landing .modal-content .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+body.site-landing .modal-content .form-control:focus,
+body.site-landing .modal-content .form-select:focus {
+    border-color: rgb(57, 245, 184);
+    box-shadow: 0 0 0 0.2rem rgba(57, 245, 184, 0.25);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+body.site-landing .modal-content .form-label {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+body.site-landing .modal-content .form-select option {
+    color: #122332;
+}
+
+@media screen and (max-width: 1400px) {
+    body.site-landing {
+        display: block !important;
+        align-items: unset !important;
+    }
+}

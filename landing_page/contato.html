@@ -2,55 +2,113 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-AU-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/bootstrap-5.0.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/media400px.css">
     <link rel="stylesheet" href="./styles/media1030px.css">
-    <link rel="stylesheet" href="../landing_page/styles/bootstrap-5.0.2-dist/css/bootstrap.css">
-    <title>Firedash</title>
+    <title>Contato — Firedash</title>
 </head>
 
-<body>
-    <header>
-        <div id="title">
-            <img src="./components/image/firedash-logo.svg" alt="logo" style="width: 350px;">
-            <h4 style="margin-left: 70px;">O seu hub de investimentos</h4>
+<body class="site-landing d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fd sticky-top">
+        <div class="container fd-navbar-container py-2 px-3">
+            <a class="navbar-brand fd-navbar-brand m-0 d-flex flex-column align-items-center align-items-lg-start gap-1 py-1 text-center text-lg-start" href="./index.html">
+                <img src="./components/image/firedash-logo.svg" alt="Firedash" class="brand-logo-img">
+                <span class="brand-tagline">O seu hub de investimentos</span>
+            </a>
+            <button class="navbar-toggler fd-navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fd-navbar-collapse" id="mainNav">
+                <ul class="navbar-nav fd-navbar-nav align-items-center justify-content-center gap-1 gap-lg-2 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item pt-1 pt-lg-0">
+                        <a class="btn btn-fd-outline px-3 px-lg-4 py-2" href="https://firedash.streamlit.app/" rel="noopener noreferrer">Acesse agora!</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <ul>
-            <a href="./index.html"><li>Inicio</li></a>
-            <a href="./servicos.html"><li>Serviços</li></a>
-            <a href=".sobre.html"><li>Sobre</li></a>
-            <a href="./contato.html"><li>Contato</li></a>
-            <a href="./login.html" id="Inscreva-sebuttom"><li>Ja tem uma conta?</li></a>
-        </ul>
-    </header>
-    <div class="container">
-        
-        <div class="child">SAC <img src="./components/image/central-de-atendimento.png" alt="SAC" style="width: 25px;"> <br>
-            <p>Entre em contato no nosso SAC e tire suas duvidas</p>
-            <p>SAC: 4020 4469 (capitais e regiões metropolitanas) <br>
-                <p>0800 003 3481 (demais localidades).</p>
+    </nav>
+    <main class="contato-page flex-grow-1 py-4 py-lg-5 px-3">
+        <div class="fd-contato-grid">
+            <article class="fd-contato-card">
+                <h2 class="contato-card-title">
+                    <img src="./components/image/central-de-atendimento.png" alt="" class="contato-card-icon" width="28" height="28">
+                    SAC
+                </h2>
+                <p class="contato-card-text">Entre em contato no nosso SAC e tire suas dúvidas.</p>
+                <p class="contato-card-text mb-0">SAC: 4020 4469 (capitais e regiões metropolitanas)</p>
+                <p class="contato-card-text">0800 003 3481 (demais localidades).</p>
+            </article>
+            <article class="fd-contato-card">
+                <h2 class="contato-card-title">
+                    <img src="./components/image/instagram.png" alt="" class="contato-card-icon" width="28" height="28">
+                    Instagram
+                </h2>
+                <p class="contato-card-text">Fique de olho em nossas redes sociais para saber todas as atualizações e novidades do nosso app.</p>
+                <a class="fd-contato-link" href="https://www.instagram.com/firedashvcpc/" rel="noopener noreferrer">Abrir Instagram</a>
+            </article>
+            <article class="fd-contato-card">
+                <h2 class="contato-card-title">
+                    <img src="./components/image/facebook.png" alt="" class="contato-card-icon" width="28" height="28">
+                    Facebook
+                </h2>
+                <p class="contato-card-text">Entre na nossa comunidade no Facebook para uma experiência mais imersiva e para dar feedback sobre o app.</p>
+                <a class="fd-contato-link" href="https://www.facebook.com/profile.php?id=61559667662735" rel="noopener noreferrer">Abrir Facebook</a>
+            </article>
+            <article class="fd-contato-card">
+                <h2 class="contato-card-title">
+                    <img src="./components/image/linkedin.png" alt="" class="contato-card-icon" width="28" height="28">
+                    LinkedIn
+                </h2>
+                <p class="contato-card-text">Acompanhe nosso movimento profissional e como atuamos no mercado de trabalho.</p>
+                <a class="fd-contato-link" href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit" rel="noopener noreferrer">Abrir LinkedIn</a>
+            </article>
         </div>
-        <div class="child">Instagram <img src="./components/image/instagram.png" alt="instagram" style="width: 25px;"><br>
-            <p>Fique de olho em nossas redes socias para saber todas atualizações e novidades do nosso app</p> <br>
-            <a href="#">Ser direcionado</a>
+    </main>
+    <footer class="site-footer mt-auto py-5">
+        <div class="container px-3">
+            <div class="row g-4 justify-content-center align-items-start text-center text-md-start">
+                <div class="col-md-4 text-center">
+                    <p class="footer-heading text-uppercase small fw-semibold text-fd-accent mb-3">Redes sociais</p>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <a href="https://www.instagram.com/firedashvcpc/" class="footer-social-link" rel="noopener noreferrer" aria-label="Instagram">
+                            <img class="footer-social-icon" src="./components/image/instagram.png" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit" class="footer-social-link" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <img class="footer-social-icon" src="./components/image/linkedin.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61559667662735" class="footer-social-link" rel="noopener noreferrer" aria-label="Facebook">
+                            <img class="footer-social-icon" src="./components/image/facebook.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p class="footer-heading text-uppercase small fw-semibold text-fd-accent mb-3">Contato</p>
+                    <p class="text-white-50 mb-2">Endereço: 78 Franklin St, New York, NY 10013-3481</p>
+                    <p class="text-white-50 mb-2">SAC: 4020 4469 (capitais e regiões metropolitanas)</p>
+                    <p class="text-white-50 mb-2">0800 003 3481 (demais localidades).</p>
+                    <p class="text-white-50 small mb-0 pt-2">Desenvolvido por: Erik — João</p>
+                </div>
+            </div>
         </div>
-        <div class="child">Facebook <img src="./components/image/facebook.png" alt="facebook" style="width: 25px;"><br>
-            <p>Entre em nossa comunidade do facebook para ter uma experiencia mais imersiva e continus oq acha do app podendo das feedback</p> <br>
-            <a href="#">Ser direcionado</a>
-        </div>
-        <div class="child">Linkedin <img src="./components/image/linkedin.png" alt="linkedin" style="width: 25px;"><br>
-            <p>Fique de olho no nosso movimento profissinal e veja como andamos no mercado de trabalho e conheça todos nossos funcionarios</p> <br>
-            <a href="#">Ser direcionado</a>
-        </div>
-    </div>
-    <footer>
-        <p>Email: </p> <br>
-        <P>Desenvolvidor por Erik Nascimento e João</P>
     </footer>
-    <script src="../landing_page/styles/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+    <script src="./styles/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
