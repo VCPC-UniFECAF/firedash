@@ -2,31 +2,48 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-AU-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/bootstrap-5.0.2-dist/css/bootstrap.css">
     <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./styles/media.css">
+    <link rel="stylesheet" href="./styles/media400px.css">
     <link rel="stylesheet" href="./styles/media1030px.css">
-    <link rel="stylesheet" href="../landing_page/styles/bootstrap-5.0.2-dist/css/bootstrap.css">
-    <title>Firedash</title>
+    <title>Sobre — Firedash</title>
 </head>
 
-<body>
-    <header>
-        <div id="title">
-            <img src="./components/image/firedash-logo.svg" alt="logo" style="width: 350px;">
-            <h4 style="margin-left: 70px;">O seu hub de investimentos</h4>
+<body class="site-landing d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fd sticky-top">
+        <div class="container fd-navbar-container py-2 px-3">
+            <a class="navbar-brand fd-navbar-brand m-0 d-flex flex-column align-items-center align-items-lg-start gap-1 py-1 text-center text-lg-start" href="./index.html">
+                <img src="./components/image/firedash-logo.svg" alt="Firedash" class="brand-logo-img">
+                <span class="brand-tagline">O seu hub de investimentos</span>
+            </a>
+            <button class="navbar-toggler fd-navbar-toggler border-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse fd-navbar-collapse" id="mainNav">
+                <ul class="navbar-nav fd-navbar-nav align-items-center justify-content-center gap-1 gap-lg-2 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./servicos.html">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-2 px-lg-3 py-2" href="./contato.html">Contato</a>
+                    </li>
+                    <li class="nav-item pt-1 pt-lg-0">
+                        <a class="btn btn-fd-outline px-3 px-lg-4 py-2" href="https://firedash.streamlit.app/" rel="noopener noreferrer">Acesse agora!</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <ul>
-            <a href="./index.html"><li>Inicio</li></a>
-            <a href="./servicos.html"><li>Serviços</li></a>
-            <a href="./sobre.html"><li>Sobre</li></a>
-            <a href="./contato.html"><li>Contato</li></a>
-            <a href="./login.html" id="Inscreva-sebuttom"><li>Ja tem uma conta?</li></a>
-        </ul>
-    </header>
+    </nav>
 
     <div class="container_sobre">
         
@@ -46,58 +63,66 @@
         <p>Segurança de ponta, contamos com uma bela infraestrutura e uma equipe de CyberSecurity que guardam todos seus dados financeiros e pessoais com atualizações frequentes de firewall e cyberprotection</p>
     </div>
 </div>
-    <h2 style="height: 30px; margin-top: 240px;">Avaliações</h2>
+    <section class="py-4 my-3">
+        <div class="container px-3">
+            <h2 class="text-center text-white mb-4">Avaliações</h2>
+            <div id="carouselSobre" class="carousel slide carousel-fd rounded-3 shadow-lg overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-indicators mb-0">
+                    <button type="button" data-bs-target="#carouselSobre" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselSobre" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselSobre" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselSobre" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselSobre" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselSobre" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner carousel-fd-inner">
+                    <div class="carousel-item active testimonial-slide" style="background-image: url(./components/image/testemunho1.png);"></div>
+                    <div class="carousel-item testimonial-slide" style="background-image: url(./components/image/testemunho2.png);"></div>
+                    <div class="carousel-item testimonial-slide" style="background-image: url(./components/image/testemunho3.png);"></div>
+                    <div class="carousel-item testimonial-slide" style="background-image: url(./components/image/testemunho4.png);"></div>
+                    <div class="carousel-item testimonial-slide" style="background-image: url(./components/image/testemunho5.png);"></div>
+                    <div class="carousel-item testimonial-slide" style="background-image: url(./components/image/testemunho6.png);"></div>
+                </div>
+                <button class="carousel-control-prev carousel-fd-control" type="button" data-bs-target="#carouselSobre" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next carousel-fd-control" type="button" data-bs-target="#carouselSobre" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-    <!--CARROSSEL-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-        </div>
-        <div class="carousel-inner" style="height: 20em;">
-          <div class="carousel-item h-100 w-40 active" style="background-image: url(./components/image/testemunho1.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
-          </div>
-          <div class="carousel-item h-100 w-40" style="background-image: url(./components/image/testemunho2.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
-          </div>
-          <div class="carousel-item h-100 w-40" style="background-image: url(./components/image/testemunho3.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
-          </div>
-          <div class="carousel-item h-100 w-40" style="background-image: url(./components/image/testemunho4.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
-          </div>
-          <div class="carousel-item h-100 w-40" style="background-image: url(./components/image/testemunho5.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
-          </div>
-          <div class="carousel-item h-100 w-40" style="background-image: url(./components/image/testemunho6.png); background-repeat: no-repeat; background-size: contain; background-position: center;">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-
-    <footer style="margin-top: 45px;">
-        <div class="linksfooter">
-
-            <a href="#"><img src="../landing_page/components/image/instagram.png" alt="instagram" style="width: 35px;"></a>
-            <a href="#"><img src="../landing_page/components/image/linkedin.png" alt="linkedin"style="width: 35px;"></a>
-            <a href="#"><img src="../landing_page/components/image/facebook.png" alt="facebook"style="width: 35px;"></a>
-        
-        </div>
-        <div class="fundinho">
-            <p>Endereço:78 FRANKLIN ST, NEW YORK, NY 10013-3481</p> <br>
-            <p>SAC: 4020 4469 (capitais e regiões metropolitanas) <br>
-            <p>0800 003 3481 (demais localidades).</p><br>
-            <p>Desenvolvido por: Erik - João</p> 
+    <footer class="site-footer mt-auto py-5">
+        <div class="container px-3">
+            <div class="row g-4 justify-content-center align-items-start text-center text-md-start">
+                <div class="col-md-4 text-center">
+                    <p class="footer-heading text-uppercase small fw-semibold text-fd-accent mb-3">Redes sociais</p>
+                    <div class="d-flex gap-2 justify-content-center">
+                        <a href="https://www.instagram.com/firedashvcpc/" class="footer-social-link" rel="noopener noreferrer" aria-label="Instagram">
+                            <img class="footer-social-icon" src="./components/image/instagram.png" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/feed/?trk=homepage-basic_sign-in-submit" class="footer-social-link" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <img class="footer-social-icon" src="./components/image/linkedin.png" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61559667662735" class="footer-social-link" rel="noopener noreferrer" aria-label="Facebook">
+                            <img class="footer-social-icon" src="./components/image/facebook.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <p class="footer-heading text-uppercase small fw-semibold text-fd-accent mb-3">Contato</p>
+                    <p class="text-white-50 mb-2">Endereço: 78 Franklin St, New York, NY 10013-3481</p>
+                    <p class="text-white-50 mb-2">SAC: 4020 4469 (capitais e regiões metropolitanas)</p>
+                    <p class="text-white-50 mb-2">0800 003 3481 (demais localidades).</p>
+                    <p class="text-white-50 small mb-0 pt-2">Desenvolvido por: Erik — João</p>
+                </div>
+            </div>
         </div>
     </footer>
-    
-    <script src="../landing_page/styles/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+
+    <script src="./styles/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
 </body>
 </html>

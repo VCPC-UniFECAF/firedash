@@ -1,43 +1,52 @@
 import streamlit as st
 import pandas as pd
-import yfinance as yf
-import investpy as inv
-from datetime import datetime, date, timedelta
 
-df_html = pd.read_html('https://economia.uol.com.br/cotacoes/bolsas/')
-altas = pd.DataFrame(data=df_html[1])
-baixas = pd.DataFrame(data=df_html[2])
-negociadas =pd.DataFrame(data=df_html[3])
+from market_utils import read_html_tables
 
-def get_metric(metric, indice):
+st.set_page_config(page_title="Firedash — Destaques", layout="wide")
+
+UOL_BOLSAS = "https://economia.uol.com.br/cotacoes/bolsas/"
+
+
+@st.cache_data(ttl=300)
+def _uol_destaque_frames() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    df_html = read_html_tables(UOL_BOLSAS)
+    if len(df_html) < 4:
+        raise ValueError("Layout da UOL inesperado: tabelas insuficientes.")
+    return (
+        pd.DataFrame(data=df_html[1]),
+        pd.DataFrame(data=df_html[2]),
+        pd.DataFrame(data=df_html[3]),
+    )
+
+
+def get_metric(metric: pd.DataFrame, indice: int) -> None:
     ticker = metric.iloc[indice, 0]
     close = metric.iloc[indice, 2]
     delta = metric.iloc[indice, 1]
-    st.metric(ticker, close, delta)
+    st.metric(str(ticker), close, delta)
 
-st.title('Ações em Destaques',anchor=False)
+
+try:
+    altas, baixas, negociadas = _uol_destaque_frames()
+except Exception as exc:  # noqa: BLE001 — exibir erro útil na UI
+    st.error(f"Não foi possível carregar cotações da UOL: {exc}")
+    st.stop()
+
+st.title("Ações em destaque", anchor=False)
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.subheader('Altas',anchor=False)
-    get_metric(altas, 0)
-    get_metric(altas, 1)
-    get_metric(altas, 2)
-    get_metric(altas, 3)
-    get_metric(altas, 4)
+    st.subheader("Altas", anchor=False)
+    for i in range(5):
+        get_metric(altas, i)
 
 with col2:
-    st.subheader('Baixas',anchor=False)
-    get_metric(baixas, 0)
-    get_metric(baixas, 1)
-    get_metric(baixas, 2)
-    get_metric(baixas, 3)
-    get_metric(baixas, 4)
-    
+    st.subheader("Baixas", anchor=False)
+    for i in range(5):
+        get_metric(baixas, i)
+
 with col3:
-    st.subheader('Mais Negociadas',anchor=False)
-    get_metric(negociadas, 0)
-    get_metric(negociadas, 1)
-    get_metric(negociadas, 2)
-    get_metric(negociadas, 3)
-    get_metric(negociadas, 4)
+    st.subheader("Mais negociadas", anchor=False)
+    for i in range(5):
+        get_metric(negociadas, i)
