@@ -2,11 +2,8 @@
 
 ### Integrantes
 - Erik Wesley Pereira do Nascimento - R.A.: **86489**
-- João Pedro de Jesus Narcizo - R.A.: **100006**
-- Miguel Lucena Ady dos Santos - R.A.: **100088**
+- Matheus Vieira Leite - R.A.: **22104**
 - Pedro de Oliveira Britto - R.A.: **96029**
-- Pedro Henrique Lima de Brito - R.A.: **103465**
-- Rafael Pansica Soga - R.A.: **98790**
 - Samuel Solano Neres - R.A.: **96037**
 
 O Firedash é uma plataforma que fornece dashboards de análise do mercado de ações, projetados para auxiliar investidores com insights acionáveis. Nossa missão é **democratizar o acesso ao mercado financeiro**, fornecendo ferramentas avançadas de análise de maneira acessível e intuitiva.
